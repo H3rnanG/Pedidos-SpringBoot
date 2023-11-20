@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "078fbca5-af85-4c99-9a36-e3a3e548a503",
+		"name": "taller-mecanica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27215022"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Cliente Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/?id=6539893a040299320e984b24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6539893a040299320e984b24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRazonSocial\": \"Nombre Prueba 2\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"numeroDocumento\": \"12345678\",\r\n    \"telefonoCliente\": \"987654321\",\r\n    \"correoCliente\": \"correo@cliente.com\",\r\n    \"direccionCliente\": \"Dirección del Cliente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCliente\": \"6539893a040299320e984b24\",\r\n    \"nombreRazonSocial\": \"Nombre Prueba Actualizado\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"numeroDocumento\": \"12345678\",\r\n    \"telefonoCliente\": \"987654321\",\r\n    \"correoCliente\": \"correo@cliente.com\",\r\n    \"direccionCliente\": \"Dirección del Cliente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/?id=6539893a040299320e984b24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6539893a040299320e984b24"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Historial Cliente",
+			"item": [
+				{
+					"name": "Historial Cliente Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/historialCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historialCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial Cliente Find By idCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/historialCliente/getAllWithId/?id=653a665b2e22b6457c23543c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historialCliente",
+								"getAllWithId",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "653a665b2e22b6457c23543c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial Cliente Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/historialCliente/?id=6539ac31967b5415bdf80a54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historialCliente",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6539ac31967b5415bdf80a54"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial Cliente Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCliente\": \"653a665b2e22b6457c23543c\",\r\n    \"fechaVisitante\": \"25-10-2023 09:30:00\",\r\n    \"descripcion\": \"Descripcion de Visita 09:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/historialCliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historialCliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial Cliente Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idHistorialCliente\": \"6539a0ff040299320e984b54\",\r\n    \"idCliente\": \"65399f43040299320e984b51\",\r\n    \"fechaVisitante\": \"25-10-2023 10:30:00\",\r\n    \"descripcion\": \"Descripcion de Visita Editado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/historialCliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historialCliente",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
