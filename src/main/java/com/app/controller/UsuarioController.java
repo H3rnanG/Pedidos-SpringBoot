@@ -37,10 +37,10 @@ public class UsuarioController {
     }
     
     @PostMapping("/")
-    public ResponseEntity<JsonNode> addUsuario(@RequestBody Usuario cliente) {
+    public ResponseEntity<JsonNode> addUsuario(@RequestBody Usuario usuario) {
         jsonResponseComponent.clearJsonResponse();
         try {
-        	usuarioDao.addUsuario(cliente);
+        	usuarioDao.addUsuario(usuario);
             jsonResponseComponent.addProperty("message", "Usuario Creado Correctamente.");
         } catch (Exception e) {
             jsonResponseComponent.addProperty("message", e.getMessage());
@@ -49,10 +49,10 @@ public class UsuarioController {
     }
     
     @PutMapping("/")
-    public ResponseEntity<JsonNode> updateUsuario(@RequestBody Usuario cliente) {
+    public ResponseEntity<JsonNode> updateUsuario(@RequestBody Usuario usuario) {
         jsonResponseComponent.clearJsonResponse();
         try {
-        	usuarioDao.updateUsuario(cliente);
+        	usuarioDao.updateUsuario(usuario);
             jsonResponseComponent.addProperty("message", "Usuario Actualizado Correctamente.");
         } catch (Exception e) {
             jsonResponseComponent.addProperty("message", e.getMessage());
